@@ -6,12 +6,11 @@ sf::Vector2f Entity::sScaleFactor{ 50.F, 50.F };
 
 int main()
 {
-    auto window
-        = sf::RenderWindow(sf::VideoMode({ 800u, 600u }), "CMake SFML Project");
+    auto window = sf::RenderWindow(sf::VideoMode({ 800u, 600u }), "CMake SFML Project");
     window.setFramerateLimit(144);
 
     Entity a{};
-    a.move({ 1, 1 });
+    a.move({ 10, 1 });
 
     while (window.isOpen()) {
         while (const std::optional event = window.pollEvent()) {

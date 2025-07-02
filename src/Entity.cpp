@@ -8,6 +8,7 @@ Entity::Entity()
     : Entity({ 0, 0 }, sf::Color::Red)
 {
 }
+
 Entity::Entity(const sf::Vector2i& initialPos, const sf::Color& color)
     : mCoord(initialPos)
 {
@@ -18,7 +19,7 @@ Entity::Entity(const sf::Vector2i& initialPos, const sf::Color& color)
 
 void Entity::draw(sf::RenderWindow& window)
 {
-    mSprite.setScale(sScaleFactor);
+    mSprite.setSize(sScaleFactor);
     mSprite.setPosition({ mCoord.x * sScaleFactor.x, mCoord.y * sScaleFactor.y });
     window.draw(mSprite);
 }
